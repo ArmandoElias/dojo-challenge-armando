@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,21 @@ namespace Challenges
                     stack.Push(i);
             }
             return result;
+        }
+
+        public static string FindLength2(string characters)
+        {
+            if (string.IsNullOrEmpty(characters))
+                return string.Empty;
+            
+            var validParenthesis = new List<string>();
+            for (int i = 0; i < characters.Length; i++)
+            {
+                var nextCharacter = i + 1;
+                if (characters[i] == '(' && characters[nextCharacter] == ')')                                
+                    validParenthesis.Add("()");                               
+            }     
+            return string.Join("", validParenthesis);
         }
     }
 }
