@@ -31,12 +31,23 @@ using Challenges;
 
 //Input: start = “hit”  end = “cog”  dict = ["hot", "dot","dog","lot","log"]
 //  Input: start = “met”  end = “ced”  dict= ["xet","ten", "cet", "lot","log"]
-var diccionaryWord = new List<string>() { "hot", "dot", "dog", "lot", "log" };
+//var diccionaryWord = new List<string>() { "hot", "dot", "dog", "lot", "log" };
 
- var words = WordLadder.GetShortertLength("hit", "cog", diccionaryWord);
+// var words = WordLadder.GetShortertLength("hit", "cog", diccionaryWord);
 
-Console.WriteLine($"Input : {string.Join(",", diccionaryWord)}");
-Console.WriteLine($"Output : {words.Count}");
-Console.WriteLine($"Explanation : {string.Join("-", words)}");
+//Console.WriteLine($"Input : {string.Join(",", diccionaryWord)}");
+//Console.WriteLine($"Output : {words.Count}");
+//Console.WriteLine($"Explanation : {string.Join("-", words)}");
 
+var numbers = new int[] { 2, 7, 11, 15 };
+var number = 18;
+foreach (var num in numbers)
+{
+    TwoSum.Add(num);
+};
+var resul = TwoSum.Find(number);
+Console.WriteLine($"Data structure : [{string.Join(",", TwoSum.data)}]");
+Console.WriteLine(@$"Input to find: {number} 
+                     Output: Index:{resul.ElementAt(0).Key} with value : {resul.ElementAt(0).Value}
+                             Index:{resul.ElementAt(1).Key} with value : {resul.ElementAt(1).Value}");
 Console.ReadKey();
