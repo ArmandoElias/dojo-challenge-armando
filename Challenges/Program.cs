@@ -39,15 +39,22 @@ using Challenges;
 //Console.WriteLine($"Output : {words.Count}");
 //Console.WriteLine($"Explanation : {string.Join("-", words)}");
 
-var numbers = new int[] { 2, 7, 11, 15 };
-var number = 18;
-foreach (var num in numbers)
-{
-    TwoSum.Add(num);
-};
-var resul = TwoSum.Find(number);
-Console.WriteLine($"Data structure : [{string.Join(",", TwoSum.data)}]");
-Console.WriteLine(@$"Input to find: {number} 
-                     Output: Index:{resul.ElementAt(0).Key} with value : {resul.ElementAt(0).Value}
-                             Index:{resul.ElementAt(1).Key} with value : {resul.ElementAt(1).Value}");
+//var numbers = new int[] { 2, 7, 11, 15 };
+//var number = 18;
+//foreach (var num in numbers)
+//{
+//    TwoSum.Add(num);
+//};
+//var resul = TwoSum.Find(number);
+//Console.WriteLine($"Data structure : [{string.Join(",", TwoSum.data)}]");
+//Console.WriteLine(@$"Input to find: {number} 
+//                     Output: Index:{resul.ElementAt(0).Key} with value : {resul.ElementAt(0).Value}
+//                             Index:{resul.ElementAt(1).Key} with value : {resul.ElementAt(1).Value}");
+var s1 = "paper";
+var s2 = "title";
+var result = IsomorphicStrings.AreIsomorphic(s1, s2);
+if (result)
+    Console.WriteLine($"{s1} and {s2} are isomorphic");
+else
+    Console.WriteLine($"{s1} and {s2} are not isomorphic");
 Console.ReadKey();
